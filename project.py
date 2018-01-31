@@ -1,9 +1,9 @@
-#S194-26 (CS294-26): Project 1 starter Python code
+#S194-26 (CS294-26 ): Project 1 starter Python code
 
 # these are just some suggested libraries
 # instead of scikit-image you could use matplotlib and opencv to read, write, and display images
 
-import numpy.f2py as np
+import numpy as npi
 import skimage as sk
 import skimage.io as skio
 
@@ -17,7 +17,7 @@ im = skio.imread(imname)
 im = sk.img_as_float(im)
     
 # compute the height of each part (just 1/3 of total)
-height = np.floor(im.shape[0] / 3.0)
+height = npi.floor(im.shape[0] / 3.0)
 
 # separate color channels
 b = im[:height]
@@ -31,7 +31,7 @@ r = im[2*height: 3*height]
 ag = align(g, b)
 ar = align(r, b)
 # create a color image
-im_out = np.dstack([ar, ag, b])
+im_out = npi.dstack([ar, ag, b])
 
 # save the image
 fname = '/out_path/out_fname.jpg'
