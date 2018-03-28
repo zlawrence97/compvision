@@ -1,7 +1,7 @@
 % CS194-26 (cs219-26): Project 1, starter Matlab code
 
 % name of the input file
-imname = 'field.jpg';
+imname = 'fruits.jpg';
 
 % read in the image
 fullim = imread(imname);
